@@ -8,23 +8,23 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <h1>Kalorien-Rechner</h1>
+    <section>
+        <h1>Kalorien-Rechner</h1>
     <form action="" onsubmit="return false">
         <label for="">Körpergröße in cm</label>
         <input type="number" name="height" id="height" required>
-
         <label for="">Alter</label>
         <input type="number" name="age" id="age" required>
-
         <label for="">Gewicht</label>
         <input type="number" name="weight" id="weight" required>
-
-        <label for="">Körperbau</label>
-        <input type="radio" name="gender" id="female">
-        <label for="">Weiblich</label>
-        <input type="radio" name="gender" id="male">
-        <label for="">Männlich</label>
-
+        <h3>Körperbau</h3>
+        <div>
+            <input type="radio" name="gender" id="female">
+            <label for="">Weiblich</label></br>
+            <input type="radio" name="gender" id="male">
+            <label for="">Männlich</label>
+        </div>
+        <h3>Aktivitäten Level</h3>
         <select name="activityLevel" id="activityLevel">
             <option value="sleep">Schlafen</option>
             <option value="sittingOrLaying">Ausschließend sitzende oder liegende Tätigkeit</option>
@@ -34,19 +34,19 @@
             <option value="heavyBodyWork">Körperlich anstrengende berufliche Arbeit</option>
         </select>
         <button onclick="calculation()">Submit</button>
-
     </form>
     <article>
-        <h4>kcal</h4>
-        <h4>kJ</h4>
-        <h3>Grundumsatz</h3>
+        <h4 id="kcal">kcal</h4>
+        <h4 id="kj">kJ</h4>
+        <h3 id="grundumsatz">Grundumsatz</h3>
         <p id="grundumsatzOutputKcal"></p>
         <p id="grundumsatzOutputKj"></p>
-        <h3>Gesamtumsatz</h3>
+        <h3 id="gesamtumsatz">Gesamtumsatz</h3>
         <p id="gesamtumsatzOutputKcal"></p>
         <p id="gesamtumsatzOutputKj"></p>
-        <p>Das Ergebnis des Rechners bietet keine medizinische gewährleistete Auswertung, sondern nur einen Orientierungswert.</p>
+        <p id="text">Das Ergebnis des Rechners bietet keine medizinische gewährleistete Auswertung, sondern nur einen Orientierungswert.</p>
     </article>
+    </section>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>

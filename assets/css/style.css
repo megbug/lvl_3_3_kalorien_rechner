@@ -1,5 +1,91 @@
+html {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    width: 35%;
+    margin: 0 auto;
+    padding: 3vh 3vw;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
 form {
     display: flex;
     flex-direction: column;
-    width: 20%;
+}
+
+form label {
+    padding: 1vh 0;
+}
+
+form input {
+    padding: 0.5vh 0;
+}
+
+form button {
+    margin: 2vh 0;
+}
+
+article {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-areas: 
+    ". kcal kj"
+    "GrU GrUkcal GrUkj"
+    "GeU GeUkcal GeUkj"
+    "text text text";
+}
+
+article h4 {
+    padding: 0;
+    margin: 0.5vh;
+}
+
+#kcal {
+    grid-area: kcal;
+    text-align: center;
+}
+
+#kj {
+    grid-area: kj;
+    text-align: center;
+}
+
+#grundumsatz {
+    grid-area: GrU;
+}
+
+#grundumsatzOutputKcal {
+    grid-area: GrUkcal;
+    text-align: center;
+    align-self: center;
+}
+
+#grundumsatzOutputKj {
+    grid-area: GrUkj;
+    text-align: center;
+    align-self: center;
+}
+
+#gesamtumsatz {
+    grid-area: GeU;
+}
+
+#gesamtumsatzOutputKcal {
+    grid-area: GeUkcal;
+    text-align: center;
+    align-self: center;
+}
+
+#gesamtumsatzOutputKj {
+    grid-area: GeUkj;
+    text-align: center;
+    align-self: center;
+}
+
+#text {
+    grid-area: text;
+    text-align: center;
 }
