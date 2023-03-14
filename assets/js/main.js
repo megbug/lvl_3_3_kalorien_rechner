@@ -52,13 +52,13 @@ const calculation = () => {
 
     if (femaleRadioBtn.checked) {
         grundumsatz = Number((655.1 + (9.6 * weight) + (1.8 * height) - (4.7 * age)));
-        grundumsatzOutputKcal.innerHTML = (grundumsatz).toFixed(2);
-        grundumsatzOutputKj.innerHTML = (grundumsatz * 4.1868).toFixed(2);
+        grundumsatzOutputKcal.innerHTML = (grundumsatz).toFixed();
+        grundumsatzOutputKj.innerHTML = (grundumsatz * 4.1868).toFixed();
     }
     else {
         grundumsatz = Number((664.7 + (13.7 * weight) + (5 * height) - (6.8 * age)));
-        grundumsatzOutputKcal.innerHTML = (grundumsatz).toFixed(2);
-        grundumsatzOutputKj.innerHTML = (grundumsatz * 4.1868).toFixed(2);
+        grundumsatzOutputKcal.innerHTML = (grundumsatz).toFixed();
+        grundumsatzOutputKj.innerHTML = (grundumsatz * 4.1868).toFixed();
     }
 
     const activityLevel = document.querySelector('#activityLevel').value;
@@ -84,8 +84,8 @@ const calculation = () => {
             break;
     }
 
-    gesamtumsatzOutputKcal.innerHTML = Number(gesamtumsatz).toFixed(2);
-    gesamtumsatzOutputKj.innerHTML = Number(gesamtumsatz * 4.1868).toFixed(2);
+    gesamtumsatzOutputKcal.innerHTML = Number(gesamtumsatz).toFixed();
+    gesamtumsatzOutputKj.innerHTML = Number(gesamtumsatz * 4.1868).toFixed();
 }
 
 
